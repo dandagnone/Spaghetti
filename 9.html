@@ -1,0 +1,27 @@
+<input id="firstname" type="color" placeholder ="firstname"/>
+<input id="lastname" type="text" placeholder ="firstname"/>
+<input id="phone" type="text" placeholder ="phone"/>
+<button id="mybutton" style ="margin-top:10px;height:230px;background-color:rgb(157, 255, 0)">submit</button>
+<script>
+let myArray=[]
+
+let style
+
+
+document.getElementById("mybutton").addEventListener("click", func)
+function func(){
+
+let firstname=document.getElementById("firstname").value
+
+let phone=document.getElementById("phone").value
+style={height:"100px",width:"100px",firstname: firstname,lastname:document.getElementById("lastname").value,phone:phone}
+console.log(style.height)
+console.log(style.firstname)
+console.log(style.lastname)
+console.log(style.phone)
+myArray.push(style)
+console.log(myArray[myArray.length-1])
+}
+
+
+</script>

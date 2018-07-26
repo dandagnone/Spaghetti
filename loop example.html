@@ -1,0 +1,42 @@
+<input id="firstname" type="text" placeholder ="firstname"/>
+<br>
+<input id="lastname" type="text" placeholder ="lastname"/>
+<br>
+<input id="phone" type="text" placeholder ="phone"/>
+<br>
+<button id="a" style ="margin-top:10px;height:30px;background-color:rgb(157, 255, 0)">submit</button>
+<br>
+<input id="searchfirst" type="text" placeholder ="search first"/>
+<br>
+<input id="searchlast" type="text" placeholder ="search last"/>
+<br>
+<button id="b" style ="margin-top:10px;height:30px;background-color:rgb(157, 255, 0)">search</button>
+result:<font id="font"></font>
+<script>
+let myArray=[]
+
+document.getElementById("a").addEventListener("click", func)
+function func(){
+    let firstname=document.getElementById("firstname").value
+    let lastname=document.getElementById("lastname").value
+    let phone=document.getElementById("phone").value
+let button1={firstname:firstname,lastname:lastname,phone:phone}
+myArray.push(button1)
+}
+document.getElementById("b").addEventListener("click", func2)
+function func2(){
+    let searchfirst=document.getElementById("searchfirst").value
+    let searchlast=document.getElementById("searchlast").value
+    for(let i=0;i<myArray.length;i++){
+        if(myArray[i].firstname==searchfirst && myArray[i].lastname==searchlast){
+        document.getElementById("font").innerText = myArray[i].phone
+
+            break
+        }
+
+
+    }
+
+
+}
+</script>

@@ -1,0 +1,72 @@
+<div Style="background-color: blue; height: 65px; width: 265px">
+<font id= "adriana"></font>
+</div>
+<div>
+    
+
+<button id= "1" style= "height: 65px; width: 65px">1</button>
+<button id= "2" style= "height: 65px; width: 65px">2</button>
+<button id= "3" style= "height: 65px; width: 65px">3</button><br>
+<button id= "4" style= "height: 65px; width: 65px">4</button>
+<button id= "5" style= "height: 65px; width: 65px">5</button>
+<button id= "6" style= "height: 65px; width: 65px">6</button><br>
+<button id= "7" style= "height: 65px; width: 65px">7</button>
+<button id= "8" style= "height: 65px; width: 65px">8</button>
+<button id= "9" style= "height: 65px; width: 65px">9</button>
+<button id= "0" style= "height: 65px; width: 65px">0</button><br>
+<button id= "+" style= "height: 65px; width: 65px">+</button>
+<button id= "-" style= "height: 65px; width: 65px">-</button>
+<button id= "/" style= "height: 65px; width: 65px">/</button>
+<button id= "*" style= "height: 65px; width: 65px">*</button>
+<button id= "=" style= "height: 65px; width: 65px">=</button>
+</div>
+
+<script>
+    document.getElementById("1").addEventListener("click", numberclick)
+    document.getElementById("2").addEventListener("click", numberclick)
+    document.getElementById("3").addEventListener("click", numberclick)
+    document.getElementById("4").addEventListener("click", numberclick)
+    document.getElementById("5").addEventListener("click", numberclick)
+    document.getElementById("6").addEventListener("click", numberclick)
+    document.getElementById("7").addEventListener("click", numberclick)
+    document.getElementById("8").addEventListener("click", numberclick)
+    document.getElementById("9").addEventListener("click", numberclick)
+    document.getElementById("0").addEventListener("click", numberclick)
+    document.getElementById("+").addEventListener("click", numberclick)
+    document.getElementById("-").addEventListener("click", numberclick)
+    document.getElementById("/").addEventListener("click", numberclick)
+    document.getElementById("*").addEventListener("click", numberclick)
+    document.getElementById("=").addEventListener("click", equalbutton)
+
+    function numberclick(e){
+        document.getElementById("adriana").innerText+=e.srcElement.textContent;
+    } 
+
+    function equalbutton(){
+let font= document.getElementById("adriana").innerText; 
+let result;
+
+if(font.includes("+")){
+    let num1= font.substring(0,font.indexOf("+"))
+    let num2= font.substring(font.indexOf("+")+1,font.length)
+    result=parseFloat(num1)+parseFloat(num2)
+
+}else if(font.includes("-")){
+    let num1= font.substring(0,font.indexOf("-"))
+    let num2= font.substring(font.indexOf("-")+1,font.length)
+    result=parseFloat(num1)-parseFloat(num2)
+    
+    }else if(font.includes("/")){
+    let num1= font.substring(0,font.indexOf("/"))
+    let num2= font.substring(font.indexOf("/")+1,font.length)
+    result=parseFloat(num1)/parseFloat(num2)
+
+}else if(font.includes("*")){
+    let num1= font.substring(0,font.indexOf("*"))
+    let num2= font.substring(font.indexOf("*")+1,font.length)
+    result=parseFloat(num1)*parseFloat(num2)
+
+}
+document.getElementById("adriana").innerText=result
+    }
+</script>

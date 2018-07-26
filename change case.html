@@ -1,0 +1,14 @@
+<script>
+let mystring="hEllO"
+let result=""
+for(let i=0;i<mystring.length;i++){
+let char=mystring.substring(i, i+1)
+if(char==char.toUpperCase()){
+    result+=char.toLowerCase()
+}
+else{
+result+=char.toUpperCase()
+}
+}
+console.log(result)
+</script>

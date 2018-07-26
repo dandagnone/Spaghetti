@@ -1,0 +1,82 @@
+<div>
+<div style=height:40px>
+<font id="font">
+
+</div>
+<button id="7">7 </button><button id="8">8 </button><button id="9">9 </button><button id="+">+</button>
+<br>
+<button id ="4">4 </button><button id="5">5 </button><button id="6">6 </button><button id="-">-</button>
+<br>
+<button id="1">1 </button><button id="2">2 </button><button id="3">3 </button><button id="=">=</button>
+<br>
+<button id="0">0</button><button id="*">*</button><button id="/">/</button>
+<br>
+<button id="clear">clear</button><button id="←"><--</button>
+<script>
+
+document.getElementById("0").addEventListener("click", function(){document.getElementById("font").innerText+="0"
+});
+document.getElementById("1").addEventListener("click", function(){document.getElementById("font").innerText+="1"
+});
+document.getElementById("2").addEventListener("click", function(){document.getElementById("font").innerText+="2"
+});
+document.getElementById("3").addEventListener("click", function(){document.getElementById("font").innerText+="3"
+});
+document.getElementById("4").addEventListener("click", function(){document.getElementById("font").innerText+="4"
+});
+document.getElementById("5").addEventListener("click", function(){document.getElementById("font").innerText+="5"
+});
+document.getElementById("6").addEventListener("click", function(){document.getElementById("font").innerText+="6"
+});
+document.getElementById("7").addEventListener("click", function(){document.getElementById("font").innerText+="7"
+});
+document.getElementById("8").addEventListener("click", function(){document.getElementById("font").innerText+="8"
+});
+document.getElementById("9").addEventListener("click", function(){document.getElementById("font").innerText+="9"
+});
+document.getElementById("+").addEventListener("click", function(){document.getElementById("font").innerText+="+"
+});
+document.getElementById("-").addEventListener("click", function(){document.getElementById("font").innerText+="-"
+});
+document.getElementById("*").addEventListener("click", function(){document.getElementById("font").innerText+="*"
+});
+document.getElementById("/").addEventListener("click", function(){document.getElementById("font").innerText+="/"
+});
+document.getElementById("clear").addEventListener("click", function(){document.getElementById("font").innerText+=""
+let font=document.getElementById("font").innerText=""});
+document.getElementById("←").addEventListener("click", function(){
+    
+let font=document.getElementById("font").innerText
+let result=font.substring(0,font.length-1)
+document.getElementById("font").innerText=result
+});
+document.getElementById("=").addEventListener("click", function(){
+
+
+let font=document.getElementById("font").innerText;
+let result;
+if(font.includes("+")){
+let a=font.substring(0,font.indexOf("+"))
+let b=font.substring(font.indexOf("+")+1,font.length)
+result=parseFloat(a)+parseFloat(b)
+
+}else if(font.includes("-")){
+    let a=font.substring(0,font.indexOf("-"))
+let b=font.substring(font.indexOf("-")+1,font.length)
+result=parseFloat(a)-parseFloat(b)
+
+}else if(font.includes("*")){
+    let a=font.substring(0,font.indexOf("*"))
+let b=font.substring(font.indexOf("*")+1,font.length)
+result=parseFloat(a)*parseFloat(b)
+
+}else if(font.includes("/")){
+    let a=font.substring(0,font.indexOf("/"))
+let b=font.substring(font.indexOf("/")+1,font.length)
+result=parseFloat(a)/parseFloat(b)
+
+}
+document.getElementById("font").innerText=result;
+});
+
+</script>

@@ -1,0 +1,16 @@
+<script>
+let mystring="hhjjmbb"
+while(mystring.length!=0){
+let mychar=mystring.substring(0,1)
+mystring=mystring.replace(mychar,"")
+if(mystring.includes(mychar)){
+    while(mystring.includes(mychar)){
+        mystring=mystring.replace(mychar,"")
+
+}
+}else{
+    console.log(mychar)
+}
+
+}
+</script>

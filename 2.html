@@ -1,0 +1,44 @@
+<table id= "table">
+<tr>
+<th> First </th>
+<th> Last </th>
+<th> Phone </th>
+</tr>
+<tr>
+<td>Daniel</td>
+<td>Dagnone</td>
+<td>5164501809</td>
+</tr>
+<tr style="background-color: rgb(146, 146, 145")>
+<td>Dan</td>
+<td>Dag</td>
+<td>8455357987</td>
+</tr>
+</table>
+<br>
+<input id="first" type="text" placeholder ="first"/>
+<br>
+<input id="last" type="text" placeholder ="last"/>
+<br>
+<input id="phone" type="text" placeholder ="phone"/>
+<br>
+<button id="a">Submit</button> 
+<script>
+document.getElementById("a").addEventListener("click", func)
+
+function func(){
+    count+=1
+    let first=document.getElementById("first").value
+    let last=document.getElementById("last").value
+    let phone=document.getElementById("phone").value
+    console.log(first)
+    let HTML;
+if (count%2==1){
+    HTML="<tr><td>"+first+"</td><td>"+last+"</td><td>"+phone+"</td></tr>"
+}
+else {
+    HTML='<tr style ="background-color:rgb(146, 146, 145"><td>'+first+'</td><td>'+last+'</td><td>'+phone+'</td></tr>'}
+    document.getElementById("table").innerHTML+=HTML
+    }
+let count=0
+</script>

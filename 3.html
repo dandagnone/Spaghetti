@@ -1,0 +1,30 @@
+<div>
+<div id="a" style="overflow:visible;width:200px;background-color: brown;height:100vh">
+<br>
+
+<button id="b"style="width:100px">Home</button>Home
+</div>
+<br>
+<br>
+<div style="width:150px">
+        <button id="b"style="width:100px">Last</button>Last
+        </div>
+
+<br>
+<br>
+<div style="width:150px">
+        <button id="b"style="width:100px">Next</button>Next
+        </div>
+
+</div>
+<script>
+document.getElementById("b").addEventListener("click", func)
+function func(){
+let div=document.getElementById("a")
+if (div.style.width =="200px"){
+    div.style.width ="50px"
+}else {
+    div.style.width ="200px"
+}
+}
+</script>

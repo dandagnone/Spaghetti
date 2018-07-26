@@ -1,0 +1,67 @@
+<div style="float:left;background-color: rgb(0, 0, 0);height: 224px;width:200px">
+    <div style="float:left">
+    <div style="width:70px;height:50px;background-color: blue">Chips </div>
+    <font style="color:aliceblue">A1</font>
+    <br>
+    <br>
+    <div style="width:70px;height:50px;background-color: blue">Food </div>
+    <font style="color:aliceblue">B1</font>
+    
+</div>
+<div style="float:right">
+        <div style="width:70px;height:50px;background-color: blue">Candy </div>
+        <font style="color:aliceblue">A2</font>
+        <br>
+        <br>
+        <div style="width:70px;height:50px;background-color: blue">Drink </div>
+        <font style="color:aliceblue">B2</font>
+    
+    </div>
+    
+</div>
+<br>
+        <font id="font"> </font>
+    <div style="float:left;background-color:black;height:205px">
+            <button id="A">A</button><button id="B">B</button><button id="C">C</button>
+            <br>
+            <button id="7">7</button><button id="8">8</button><button id="9">9</button>
+                <br>
+                <button id ="4">4</button><button id="5">5</button><button id="6">6</button>
+                <br>
+                <button id="1">1</button><button id="2">2</button><button id="3">3</button>
+                <br>
+                <button id="0">0</button></button><button id="←"><--</button>
+
+    </div>
+<script>
+            
+        
+document.getElementById("A").addEventListener("click", buttonpress)
+document.getElementById("B").addEventListener("click", buttonpress)
+document.getElementById("C").addEventListener("click", buttonpress)
+document.getElementById("1").addEventListener("click", buttonpress)
+document.getElementById("2").addEventListener("click", buttonpress)
+
+let isDisplayingPrice=false
+
+function buttonpress(e){
+    if(isDisplayingPrice==true){
+document.getElementById("font").innerText=e.srcElement.textContent;
+isDisplayingPrice= false
+}
+else{
+    document.getElementById("font").innerText+=e.srcElement.textContent
+}
+let fonts= document.getElementById("font").innerText
+if(fonts=="A1" || fonts=="B1" || fonts=="B2" || fonts=="A2"){
+    document.getElementById("font").innerText="$1.00"
+
+isDisplayingPrice= true
+}
+}
+
+                
+                
+                
+                
+</script>

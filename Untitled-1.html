@@ -1,0 +1,38 @@
+<div>
+<div id="div" style="width:100%;height:250px;background-color: aqua">
+<button id="mybutton" style ="margin-top:10px;height:230px;background-color:rgb(157, 255, 0)">Go home</button>
+<button id="a" style ="margin-top:10px;height:230px;background-color:rgb(17, 0, 255)">Go to Facebook</button>
+<button id="b" style ="margin-top:10px;height:230px;background-color:red">Go to Twitter</button>
+</div>
+</br>
+<input id="firstname" type="text" placeholder ="firstname"/>
+<br/>
+<input id="lastname" type="text" placeholder ="lastname"/>
+<script>
+    document.getElementById("mybutton").addEventListener("click", func)
+function func(){
+    //console.log("hello")
+    //alert("your PC Has Been Attacked By Ransomware")
+    console.log(document.getElementById("firstname").value)
+    console.log(document.getElementById("lastname").value)
+    document.getElementById("firstname").value=""
+    document.getElementById("lastname").value=""
+    //document.getElementById("a").style.width="250px"
+    //document.getElementById("a").style.height="250px"
+
+if (document.getElementById("div").style.width =="250px" && document.getElementById("div").style.height =="250px"){
+    
+    document.getElementById("div").style.width ="500px";
+    document.getElementById("div").style.height ="500px";
+}
+    else
+        {
+    
+        document.getElementById("div").style.height="500px";
+        document.getElementById("div").style.width="250px";
+    }
+}
+</script>
+<br>
+<div id="div" style="width:500px;height:500px;background-color: blueviolet">
+</div>

@@ -1,0 +1,54 @@
+<input id="first" type="text" placeholder="first"/>
+<br>
+<input id="last" type="text" placeholder="last"/>
+<br>
+<input id="phone" type="text"placeholder="phone"/>
+<br>
+<button id="a">Submit</button>
+<br>
+<button id="b">Update</button>
+<br>
+<table id="table" style="border:2px solid black">
+<tr>
+<th style="width:75px">first</th><th style="width:75px">last</th><th style="width:75px">phone</th>
+
+</tr>
+
+
+
+
+</table>
+<script>
+let myArray=[]
+    document.getElementById("a").addEventListener("click", func)
+    function func(){
+    
+    let first=document.getElementById("first").value
+    let last=document.getElementById("last").value
+    let phone=document.getElementById("phone").value
+if(first!=""&& last!=""&& phone!=""){
+    let object={first:first,last:last,phone:phone}
+myArray.push(object)
+document.getElementById("first").value=""
+document.getElementById("last").value=""
+document.getElementById("phone").value=""
+}
+else{alert("Erin broke it")
+
+
+}
+
+
+
+
+    }
+document.getElementById("b").addEventListener("click", func2)
+function func2(){
+for(let i=0;i<myArray.length;i++){
+let HTML='<tr><td>'+ myArray[i].first+'</td><td>'+myArray[i].last+'</td><td>'+myArray[i].phone+'</td></tr>'
+document.getElementById("table").innerHTML+=HTML
+
+}
+myArray=[]
+}
+</script>

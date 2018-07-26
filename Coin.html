@@ -1,0 +1,16 @@
+<input id="q" placeholder="quarter"></input>
+<br>
+<input id="d" placeholder="dimes"></input>
+<br>
+<input id="n" placeholder="nickles"></input>
+<br>
+<button id="press">Press</button>
+</button>
+<script>
+document.getElementById("press").addEventListener("click", func)
+function func(){
+let result=(parseFloat(document.getElementById("q").value)*.25)+(parseFloat(document.getElementById("d").value)*.10)+(parseFloat(document.getElementById("n").value)*.05)
+
+console.log(result)
+}
+</script>
